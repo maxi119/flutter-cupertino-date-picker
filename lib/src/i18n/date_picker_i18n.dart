@@ -24,6 +24,7 @@ part 'strings_fr.dart';
 part 'strings_sr_cyr.dart';
 part 'strings_sr_lat.dart';
 part 'strings_nl.dart';
+part 'strings_zh_tw.dart';
 
 abstract class _StringsI18n {
   const _StringsI18n();
@@ -53,6 +54,9 @@ enum DateTimePickerLocale {
 
   /// Chinese (ZH) Simplified
   zh_cn,
+
+  /// Chinese Tranditional
+  zh_tw, 
 
   /// Portuguese (PT) Brazil
   pt_br,
@@ -128,6 +132,7 @@ const DateTimePickerLocale DATETIME_PICKER_LOCALE_DEFAULT =
 const Map<DateTimePickerLocale, _StringsI18n> datePickerI18n = {
   DateTimePickerLocale.en_us: const _StringsEnUs(),
   DateTimePickerLocale.zh_cn: const _StringsZhCn(),
+  DateTimePickerLocale.zh_tw: const _StringsZhTw(),
   DateTimePickerLocale.pt_br: const _StringsPtBr(),
   DateTimePickerLocale.id: const _StringsId(),
   DateTimePickerLocale.ar_eg: const _StringsArEg(),
