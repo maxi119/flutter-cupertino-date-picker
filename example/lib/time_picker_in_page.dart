@@ -6,7 +6,7 @@ import 'package:flutter_cupertino_date_picker/flutter_cupertino_date_picker.dart
 /// @author dylan wu
 /// @since 2019-05-10
 class TimePickerInPage extends StatefulWidget {
-  TimePickerInPage({Key key}) : super(key: key);
+  TimePickerInPage({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _TimePickerInPageState();
@@ -18,12 +18,11 @@ const String INIT_DATETIME = '2019-05-17 18:13:15';
 const String DATE_FORMAT = 'HH时:mm分:s';
 
 class _TimePickerInPageState extends State<TimePickerInPage> {
-  DateTime _dateTime;
+  DateTime _dateTime = DateTime.parse(INIT_DATETIME);
 
   @override
   void initState() {
     super.initState();
-    _dateTime = DateTime.parse(INIT_DATETIME);
   }
 
   @override

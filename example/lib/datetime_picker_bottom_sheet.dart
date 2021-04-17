@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_cupertino_date_picker/flutter_cupertino_date_picker.dart';
 
 class DateTimePickerBottomSheet extends StatefulWidget {
-  DateTimePickerBottomSheet({Key key}) : super(key: key);
+  DateTimePickerBottomSheet({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _DateTimePickerBottomSheetState();
@@ -22,13 +22,12 @@ class _DateTimePickerBottomSheetState extends State<DateTimePickerBottomSheet> {
   DateTimePickerLocale _locale = DateTimePickerLocale.zh_cn;
   List<DateTimePickerLocale> _locales = DateTimePickerLocale.values;
 
-  DateTime _dateTime;
+  DateTime _dateTime = DateTime.parse(INIT_DATETIME);
 
   @override
   void initState() {
     super.initState();
     _formatCtrl.text = _format;
-    _dateTime = DateTime.parse(INIT_DATETIME);
   }
 
   /// Display time picker.
@@ -62,7 +61,7 @@ class _DateTimePickerBottomSheetState extends State<DateTimePickerBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> radios = List<Widget>();
+    List<Widget> radios = <Widget>[];
     _locales.forEach((locale) {
       radios.add(Container(
         margin: EdgeInsets.only(right: 8.0),
